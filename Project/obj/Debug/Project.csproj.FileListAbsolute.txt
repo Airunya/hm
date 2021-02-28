@@ -19,3 +19,10 @@ C:\Users\i.serednikov\Desktop\VS\hm\Project\obj\Debug\Project.csprojAssemblyRefe
 C:\Users\i.serednikov\Desktop\VS\hm\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
 C:\Users\i.serednikov\Desktop\VS\hm\Project\obj\Debug\Project.exe
 C:\Users\i.serednikov\Desktop\VS\hm\Project\obj\Debug\Project.pdb
+C:\Users\SayPlz\Desktop\vs_new\hm\Project\bin\Debug\Project.exe.config
+C:\Users\SayPlz\Desktop\vs_new\hm\Project\bin\Debug\Project.exe
+C:\Users\SayPlz\Desktop\vs_new\hm\Project\bin\Debug\Project.pdb
+C:\Users\SayPlz\Desktop\vs_new\hm\Project\obj\Debug\Project.csprojAssemblyReference.cache
+C:\Users\SayPlz\Desktop\vs_new\hm\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
+C:\Users\SayPlz\Desktop\vs_new\hm\Project\obj\Debug\Project.exe
+C:\Users\SayPlz\Desktop\vs_new\hm\Project\obj\Debug\Project.pdb
