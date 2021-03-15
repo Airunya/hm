@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Project.Lesson_6.Class5</StartupObject>
+    <StartupObject>Level_1.Lesson_7.Class6</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -68,6 +68,7 @@
     <Compile Include="Lesson_5\Class4.cs" />
     <Compile Include="Lesson_6\Class5.cs" />
     <Compile Include="Lesson_6\TodoList.cs" />
+    <Compile Include="Lesson_7\Class6.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
