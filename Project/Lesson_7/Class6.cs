@@ -101,146 +101,125 @@ namespace Level_1.Lesson_7
 
         private static bool CheckWin(char sym)
         {
-            
             int win = 4;
-            int count = 0;
-
-            for (int i = 0; i < field.GetLength(0); i++)
+            
+            if (sym == PLAYER_DOT)
             {
-                if (field[0,i] == sym)
+                //горизонтальная
+                for (int i = 0; i < field.GetLength(0); i++)
                 {
-                    count++;
-                }                
-                if (field[0, i] != PLAYER_DOT && count != win)
-                    //(field[0,i] == EMPTY_DOT || field[0, i] == AI_DOT && count != win)
-                {
-                    count = 0;
-                }
-                if (count == win)
-                {
-                    return true;
-                }
-
-            }
-            for (int i = 0; i < field.GetLength(1); i++)
-            {
-                if (field[i, 0] == sym)
-                {
-                    count++;
-                }
-                if (field[i, 0] != PLAYER_DOT && count != win)
-                {
-                    count = 0;
-                }
-                if (count == win)
-                {
-                    return true;
-                }
-            }
-
-            for (int i = 0; i < field.GetLength(0); i++)
-            {
-                for (int j = 0; j < field.GetLength(1); j++)
-                {
-                    if (i == j)
+                    
+                    for (int j = 0; j < field.GetLength(1); j++)
                     {
+                        int userCount = 0;
+                        if (field[i,j]==sym)
+                        {
+                            for (int n = 0; n < field.GetLength(0); n++)
+                            {
+                                if (field[i,n]==sym)
+                                {
+                                    userCount++;
+                                }
+                                if (field[i, n] == AI_DOT && userCount != win)
+                                {
+                                    userCount = 0;
+                                }
+                                if (userCount == win)
+                                {
+                                    return true;
+                                }
+                            }
+                        }                        
+                    }                        
+                }
+                //вертикальная
+                for (int i = 0; i < field.GetLength(0); i++)
+                {
+                    for (int j = 0; j < field.GetLength(1); j++)
+                    {
+                        int userCount = 0;
                         if (field[i, j] == sym)
                         {
-                            count++;
+                            for (int n = 0; n < field.GetLength(1); n++)
+                            {
+                                if (field[n, j] == sym)
+                                {
+                                    userCount++;
+                                }
+                                if (field[n, j] == AI_DOT && userCount != win)
+                                {
+                                    userCount = 0;
+                                }
+                                if (userCount == win)
+                                {
+                                    return true;
+                                }
+                            }
                         }
-                        
                     }
-                    else if (field.GetLength(1) - j - 1 == i )
+                }
+                // *\*
+                for (int i = 0; i < field.GetLength(0); i++)
+                {
+                    for (int j = 0; j < field.GetLength(1); j++)
                     {
+                        int userCount = 0;
                         if (field[i, j] == sym)
                         {
-                            count++;
+                                for (int n = i; n < field.GetLength(0); n++)
+                                {
+                                for (int h = j; h < field.GetLength(1); h++)
+                                {
+                                    if (field[n, h] == sym)
+                                    {
+                                        userCount++;
+                                    }
+                                    if (field[n, h] == AI_DOT && userCount != win)
+                                    {
+                                        userCount = 0;
+                                    }
+                                    if (userCount == win)
+                                    {
+                                        return true;
+                                    }
+                                }                               
+                            }
+                            
                         }
-                        
                     }
-                    //if (field[i, j] == sym)
-                    //{
-                    //    count++;
-                    //}
-                    //if (sym == field[i + 1, j + 1])
-                    //{
-                    //    count++;
-                    //}
-                    //if (sym == field[i - 1, j - 1] || sym == field[i - 1, j + 1] || sym == field[i + 1, j - 1] || sym == field[i + 1, j + 1])
-                    //{
-                    //    count++;
-                    //}
-                    //if (PLAYER_DOT != field[i - 1, j - 1] || PLAYER_DOT != field[i - 1, j + 1] || PLAYER_DOT != field[i + 1, j - 1] || PLAYER_DOT != field[i + 1, j + 1])
-                    ///*(field[i, j + 1] == EMPTY_DOT || field[i, j + 1] == AI_DOT && count != win)*/
-                    //{
-                    //    count = 0;
-                    //}
-                    if (count == win)
+                }
+                // */*
+                for (int i = field.GetLength(0) - 1; i >= 0; i--)
+                {
+                    for (int j = field.GetLength(1) - 1; j >= 0; j--)
                     {
-                        return true;
-                    }
+                        int userCount = 0;
+                        if (field[i, j] == sym)
+                        {
+                            for (int n = i; field.GetLength(0) > n; n--)
+                            {
+                                for (int h = j; h > 1; h--)
+                                {
+                                    if (field[n, h] == sym)
+                                    {
+                                        userCount++;
+                                    }
+                                    if (field[n, h] == AI_DOT && userCount != win)
+                                    {
+                                        userCount = 0;
+                                    }
+                                    if (userCount == win)
+                                    {
+                                        return true;
+                                    }
+                                }
+                            }
 
+                        }
+                    }
                 }
             }
-            //for (int i = field.GetLength(0); i >0; i--)
-            //{
-            //    for (int j = field.GetLength(1); j >0 ; j--)
-            //    {
-            //        if (field[i, j - 1] == sym)
-            //        {
-            //            count++;
-            //        }
-            //        if (field[i, j - 1] == EMPTY_DOT || field[i, j - 1] == AI_DOT && count != win)
-            //        {
-            //            count = 0;
-            //        }
-            //        if (count == win)
-            //        {
-            //            return true;
-            //        }
-
-            //    }
-            //}
-
-
-
-
-            //if (field[0, 0] == sym && field[0, 1] == sym && field[0, 2] == sym)
-            //{
-            //    return true;
-            //}
-            //if (field[1, 0] == sym && field[1, 1] == sym && field[1, 2] == sym)
-            //{
-            //    return true;
-            //}
-            //if (field[2, 0] == sym && field[2, 1] == sym && field[2, 2] == sym)
-            //{
-            //    return true;
-            //}
-
-            //if (field[0, 0] == sym && field[1, 0] == sym && field[2, 0] == sym)
-            //{
-            //    return true;
-            //}
-            //if (field[0, 1] == sym && field[1, 1] == sym && field[2, 1] == sym)
-            //{
-            //    return true;
-            //}
-            //if (field[0, 2] == sym && field[1, 2] == sym && field[2, 2] == sym)
-            //{
-            //    return true;
-            //}
-
-            //if (field[0, 0] == sym && field[1, 1] == sym && field[2, 2] == sym)
-            //{
-            //    return true;
-            //}
-            //if (field[2, 0] == sym && field[1, 1] == sym && field[0, 2] == sym)
-            //{
-            //    return true;
-            //}
-
-            return false;
+            return false;         
         }
 
         static void Main(string[] args)
