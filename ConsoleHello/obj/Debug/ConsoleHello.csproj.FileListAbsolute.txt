@@ -1,0 +1,10 @@
+C:\Users\i.serednikov\Desktop\vs_new\hm\ConsoleHello\bin\Debug\ConsoleHello.exe.config
+C:\Users\i.serednikov\Desktop\vs_new\hm\ConsoleHello\bin\Debug\ConsoleHello.exe
+C:\Users\i.serednikov\Desktop\vs_new\hm\ConsoleHello\bin\Debug\ConsoleHello.pdb
+C:\Users\i.serednikov\Desktop\vs_new\hm\ConsoleHello\bin\Debug\LibraryEx.dll
+C:\Users\i.serednikov\Desktop\vs_new\hm\ConsoleHello\bin\Debug\LibraryEx.pdb
+C:\Users\i.serednikov\Desktop\vs_new\hm\ConsoleHello\obj\Debug\ConsoleHello.csprojAssemblyReference.cache
+C:\Users\i.serednikov\Desktop\vs_new\hm\ConsoleHello\obj\Debug\ConsoleHello.csproj.CoreCompileInputs.cache
+C:\Users\i.serednikov\Desktop\vs_new\hm\ConsoleHello\obj\Debug\ConsoleHello.csproj.CopyComplete
+C:\Users\i.serednikov\Desktop\vs_new\hm\ConsoleHello\obj\Debug\ConsoleHello.exe
+C:\Users\i.serednikov\Desktop\vs_new\hm\ConsoleHello\obj\Debug\ConsoleHello.pdb
