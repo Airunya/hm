@@ -1,0 +1,5 @@
+C:\Users\i.serednikov\Desktop\vs_new\hm\LibraryEx\bin\Debug\LibraryEx.dll
+C:\Users\i.serednikov\Desktop\vs_new\hm\LibraryEx\bin\Debug\LibraryEx.pdb
+C:\Users\i.serednikov\Desktop\vs_new\hm\LibraryEx\obj\Debug\LibraryEx.csproj.CoreCompileInputs.cache
+C:\Users\i.serednikov\Desktop\vs_new\hm\LibraryEx\obj\Debug\LibraryEx.dll
+C:\Users\i.serednikov\Desktop\vs_new\hm\LibraryEx\obj\Debug\LibraryEx.pdb
